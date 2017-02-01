@@ -16,8 +16,11 @@
 		  $this.bind('qrcodereader.decode',function(){
 			 data.decode(); 
 		  });
-		   $this.bind('qrcodereader.scan',function(){
-			 data.scan(); 
+		   $this.bind('qrcodereader.scan-start',function(){
+			 data.startScanner(); 
+		  });
+	          $this.bind('qrcodereader.scan-stop',function(){
+			 data.stopScanner(); 
 		  });
 	  }
       if (typeof option == 'string') data[option]()
