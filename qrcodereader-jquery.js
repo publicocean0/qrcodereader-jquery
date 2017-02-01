@@ -13,7 +13,7 @@
       if (!data && typeof option == 'string') return
       if (!data) {
 		  $this.data('qrcodereader', (data = new QRCodeReader(this, options)))
-		  $this.bind('decode',function(){
+		  $this.bind('qrcodereader.decode',function(){
 			 data.decode(); 
 		  });
 	  }
