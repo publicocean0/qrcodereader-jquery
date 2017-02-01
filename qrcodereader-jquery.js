@@ -1,4 +1,4 @@
- (function ($) {
+   (function ($) {
 
    'use strict';
  var QRCodeReader=window.QRCodeReader;
@@ -15,6 +15,9 @@
 		  $this.data('qrcodereader', (data = new QRCodeReader(this, options)))
 		  $this.bind('qrcodereader.decode',function(){
 			 data.decode(); 
+		  });
+		   $this.bind('qrcodereader.scan',function(){
+			 data.scan(); 
 		  });
 	  }
       if (typeof option == 'string') data[option]()
