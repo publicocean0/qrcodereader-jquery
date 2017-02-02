@@ -8,8 +8,8 @@
       var $this   = $(this)
       var data    = $this.data('qrcodereader')
       var options = typeof option == 'object' && option;
-       
- 
+      
+
       if (!data && typeof option == 'string') return
       if (!data) {
 		  $this.data('qrcodereader', (data = new QRCodeReader(this, options)))
