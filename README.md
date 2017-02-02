@@ -1,7 +1,7 @@
 # qrcodereader-jquery
 QRCode Reader plugin for jquery
 <pre>
-$('#mycanvas').qrcodeReader({
+$('#mycanvas'||'#myimage'||'myvideo').qrcodeReader({
 autostop:true,
 outputCanvas:canvas,//usefull if you want show laser scanning indicator
 onSuccess:function(r){
@@ -16,4 +16,4 @@ $('#mycanvas').trigger('qrcodereader.decode');//decode current image
 $('#mycanvas').trigger('qrcodereader.start-scan');
 $('#mycanvas').trigger('qrcodereader.stop-scan');
 </pre>
-It works with canvas or image.
+It works with canvas or image or video.
