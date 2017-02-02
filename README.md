@@ -17,3 +17,4 @@ $('#mycanvas').trigger('qrcodereader.start-scan');
 $('#mycanvas').trigger('qrcodereader.stop-scan');
 </pre>
 It works with canvas or image or video.
+Use bindep for injecting code in the page.
