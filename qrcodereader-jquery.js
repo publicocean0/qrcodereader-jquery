@@ -8,13 +8,19 @@
       var $this   = $(this)
       var data    = $this.data('qrcodereader')
       var options = typeof option == 'object' && option;
-      
-
+       
+ 
       if (!data && typeof option == 'string') return
       if (!data) {
 		  $this.data('qrcodereader', (data = new QRCodeReader(this, options)))
 		  $this.bind('qrcodereader.decode',function(){
 			 data.decode(); 
+		  });
+		   $this.bind('qrcodereader.scan-start',function(e,options){
+			 data.startScanner(options); 
+		  });
+	          $this.bind('qrcodereader.scan-stop',function(){
+			 data.stopScanner(); 
 		  });
 	  }
       if (typeof option == 'string') data[option]()
