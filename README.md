@@ -4,7 +4,7 @@ QRCode Reader plugin for jquery
 $('#mycanvas'||'#myimage'||'myvideo').qrcodeReader({
 autostop:true,
 outputCanvas:canvas,//usefull if you want show laser scanning indicator
-onSuccess:function(r){
+onDetected:function(r){
 console.log(r)
 },
 onError:function(e){
